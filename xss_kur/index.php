@@ -27,6 +27,7 @@ if (isset($_SESSION['authenticated'])) {
         <input type="text" name="username">
         <button type="submit">log in</button>
     </form>
+    <hr>
 </body>
 
 </html>
