@@ -1,0 +1,3 @@
+<?php
+define('FLAG', 'CTF{S3CRE7_4PP_H4HaH4hA}');
+/* 1208`0438`2438`7593 */
