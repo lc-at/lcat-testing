@@ -1,5 +1,6 @@
 <?php
-$conn = mysqli_connect("localhost", "cat", "");
+$c = include('config.php');
+$conn = mysqli_connect($c->hostname, $c->username, $c->password);
 $ua = $_SERVER["HTTP_USER_AGENT"];
 for ($i = 0; $i < 25; $i++) {
 	$ua = preg_replace("/(union|select|order|by|database|user|schema|)/i", "", $ua);
