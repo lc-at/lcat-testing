@@ -14,7 +14,7 @@ $stmt = "SELECT concat('$ua'), '$cur_time' FROM DUAL";
 $res = array_values(mysqli_fetch_assoc(mysqli_query($conn, $stmt)));
 $ua_o = htmlentities($res[0]);
 
-if ($res[1] == $cur_time) {
+if ($res[1] == $cur_time and !isset($_SESSION['blocked'])) {
 	echo sprintf("At this time ($cur_time), you have a very good browser, ua ~> %s", $ua_o);
 } else {
 	$_SESSION['blocked'] = true;
